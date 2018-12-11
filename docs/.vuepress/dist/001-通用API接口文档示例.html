@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>客户日志流水接口示例</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.0d78807f.js" as="script"><link rel="preload" href="/assets/js/4.e3dc6bd8.js" as="script"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.29cc9666.js"><link rel="prefetch" href="/assets/js/5.e4d649b1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc2a2ebf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="客户日志流水接口示例"><a href="#客户日志流水接口示例" aria-hidden="true" class="header-anchor">#</a> 客户日志流水接口示例</h1> <blockquote><p>维护人员：<strong>Tevin</strong><br>
+创建时间：2016-04-06</p></blockquote> <h2 id="接口简介"><a href="#接口简介" aria-hidden="true" class="header-anchor">#</a> 接口简介</h2> <p>实时查询客户各种操作(例如登录，拓客等)的流水日志</p> <h2 id="接口详情"><a href="#接口详情" aria-hidden="true" class="header-anchor">#</a> 接口详情</h2> <h3 id="请求地址"><a href="#请求地址" aria-hidden="true" class="header-anchor">#</a> 请求地址</h3> <p>/api/customer-flow</p> <h3 id="请求类型"><a href="#请求类型" aria-hidden="true" class="header-anchor">#</a> 请求类型</h3> <p>GET</p> <h3 id="请求参数"><a href="#请求参数" aria-hidden="true" class="header-anchor">#</a> 请求参数</h3> <table><thead><tr><th>参数名</th> <th style="text-align:center">类型</th> <th style="text-align:center">必填</th> <th>描述</th> <th>默认值</th> <th>参考值</th></tr></thead> <tbody><tr><td>customer_id</td> <td style="text-align:center">number</td> <td style="text-align:center">是</td> <td>客户id</td> <td>-</td> <td>132</td></tr> <tr><td>type</td> <td style="text-align:center">number</td> <td style="text-align:center">否</td> <td>客户类型，0所有、1扩展、2报备、3成交</td> <td>-</td> <td>1</td></tr></tbody></table> <h3 id="返回正确json示例"><a href="#返回正确json示例" aria-hidden="true" class="header-anchor">#</a> 返回正确JSON示例</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    <span class="token string">&quot;state&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token number">10200</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;ok&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;data&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">307</span><span class="token punctuation">,</span>  <span class="token comment">//流水id</span>
+        <span class="token string">&quot;real_name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Tevin&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//用户名称</span>
+        <span class="token string">&quot;mobile&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;暂无&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//用户手机</span>
+        <span class="token string">&quot;origin&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;暂无&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//用户来源</span>
+        <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2016-04-04 20:00:00&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//加入时间</span>
+        <span class="token string">&quot;last_login&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2016-05-22 15:30:21&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//最后登录时间</span>
+        <span class="token string">&quot;log&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment">//日志列表</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="返回错误json示例"><a href="#返回错误json示例" aria-hidden="true" class="header-anchor">#</a> 返回错误JSON示例</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    <span class="token string">&quot;state&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token number">10500</span>
+        <span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;服务器未知报错&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="备注说明"><a href="#备注说明" aria-hidden="true" class="header-anchor">#</a> 备注说明</h3> <p>无</p> <h3 id="修改日志"><a href="#修改日志" aria-hidden="true" class="header-anchor">#</a> 修改日志</h3> <ul><li>【2016-05-22】<br>
+新增了last_login最后登录时间字段</li></ul></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/4.e3dc6bd8.js" defer></script><script src="/assets/js/app.0d78807f.js" defer></script>
+  </body>
+</html>
